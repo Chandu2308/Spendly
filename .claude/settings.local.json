@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(where.exe ollama:*)",
+      "Read(//c/Users/NxtWave/AppData/Local/Programs/Ollama/**)",
+      "Read(//c/Program Files/**)",
+      "Read(//c/Users/NxtWave/AppData/Local/Ollama/**)",
+      "Bash(\"/c/Users/NxtWave/AppData/Local/Programs/Ollama/ollama.exe\" --version)"
+    ]
+  }
+}
