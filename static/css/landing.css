@@ -227,6 +227,75 @@
     background: #7d72d7;
 }
 
+.video-modal[hidden] {
+    display: none;
+}
+
+.video-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+}
+
+.video-modal-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(17, 17, 17, 0.72);
+}
+
+.video-modal-dialog {
+    position: relative;
+    z-index: 1;
+    width: min(100%, 920px);
+    padding: 24px 24px 20px;
+    border-radius: 24px;
+    background: #ffffff;
+    box-shadow: 0 24px 80px rgba(0, 0, 0, 0.24);
+}
+
+.video-modal-close {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    width: 42px;
+    height: 42px;
+    border: 0;
+    border-radius: 50%;
+    background: #f1f1ec;
+    color: #111111;
+    font-size: 28px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.video-modal-title {
+    margin-bottom: 16px;
+    color: #111111;
+    font-family: var(--font-display);
+    font-size: 32px;
+    line-height: 1.1;
+}
+
+.video-modal-frame {
+    position: relative;
+    overflow: hidden;
+    border-radius: 18px;
+    background: #000000;
+    padding-top: 56.25%;
+}
+
+.video-modal-frame iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
 @media (max-width: 900px) {
     .hero {
         padding: 40px 18px 56px;
@@ -263,6 +332,14 @@
     .hero-chart-label {
         font-size: 18px;
     }
+
+    .video-modal-dialog {
+        padding: 22px 22px 18px;
+    }
+
+    .video-modal-title {
+        font-size: 28px;
+    }
 }
 
 @media (max-width: 560px) {
@@ -295,5 +372,25 @@
 
     .hero-chart-card {
         padding: 20px 16px;
+    }
+
+    .video-modal {
+        padding: 16px;
+    }
+
+    .video-modal-dialog {
+        padding: 20px 16px 16px;
+        border-radius: 20px;
+    }
+
+    .video-modal-title {
+        margin-bottom: 14px;
+        padding-right: 40px;
+        font-size: 24px;
+    }
+
+    .video-modal-close {
+        top: 10px;
+        right: 10px;
     }
 }
